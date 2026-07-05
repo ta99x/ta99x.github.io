@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@nyvjor commissions</title>
+    <style>
+        /* 
+        notes:
+        padding: top right bottom left */
+
+
+
+        @font-face {
+            font-family: "Cinzel-Decorative";
+            src: url(CinzelDecorative-Regular.ttf);
+        }
+
+
+        @font-face {
+            font-family: "Tiro_Gurmukhi";
+            src: url(TiroGurmukhi-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: "Tiro_Gurmukhi Italic";
+            src: url(TiroGurmukhi-Italic.ttf);
+        }
+
+
+        body {
+            background-color: #184a34;
+            width: 100%;
+            height: auto;
+            color: #123024;
+            position: relative;
+            font-size: 16px;
+            font-family: 'Tiro_Gurmukhi';
+            line-height: 1.6em;
+        }
+
+
+        .main_container {
+            display: block;
+            position: relative;
+            width: 60%;
+            height: auto;
+            background-color: #FFEEEB;
+            top: 100px;
+            margin: auto;
+            box-shadow: 0 1em 1em 0.5em #123024;
+            border-radius: 1em 1em 1em 1em;
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+        .main_container a {
+            -webkit-text-fill-color: 'transparent';
+            -webkit-text-stroke: 0.05em;
+            -webkit-text-stroke-color: #c15400;
+        }
+
+        .top_container {
+            position: relative;
+            width: 85%;
+            margin: auto;
+            align-self: center;
+            display: grid;
+            grid-template-columns: 32% 30% 30%;
+            column-gap: 3%;
+            top: 20px;
+            border: 0.1em #184a34 solid;
+            line-height: 1.5em;
+            height: auto;
+        }
+
+        #bio {
+            text-indent: 3em;
+            text-align: justify;
+            padding: 2em;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .top_container div {
+            max-width: 100%;
+            border-right: 0.1em #2a734b60 solid;
+            padding: 0;
+            padding-top: 2em;
+        }
+
+        .top_container div li {
+            margin-left: -2em;
+        }
+
+        .button_container {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            column-gap: 0.5em;
+            position: relative;
+            height: auto;
+            width: 70%;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 2em;
+            margin-top: 3em;
+
+        }
+
+        .button_container input {
+            background-color: #184a34;
+            border-color: #184a3450;
+            border-radius: 0.6em;
+            line-height: 2.5em;
+            width: 95%;
+            color: #FFEEEB;
+            /* change button font */
+            font-family: 'Cinzel-Decorative';
+            font-size: 18px;
+
+        }
+
+        a {
+            color: #ec9330;
+            font-size: 1.1em;
+        }
+
+        li {
+            list-style-type: "★    ";
+        }
+
+        ul {
+            margin-left: 2em;
+        }
+
+        hr {
+            position: relative;
+            color: #184a3480;
+            width: 85%;
+            height: auto;
+        }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            width: 15em;
+            bottom: -4em;
+            text-align: center;
+            margin: auto;
+            padding: 3em;
+            color: #FFEEEB70;
+            margin-top: 2em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 4em;
+            align-self: center;
+            font-family: 'Cinzel-Decorative';
+        }
+
+        h2 {
+            text-align: right;
+            margin-right: 4em;
+        }
+
+        h3 {
+            text-align: left;
+            margin-left: 4em;
+            line-height: 0.8em;
+            padding-top: 0.5em;
+        }
+
+        em {
+            font-family: 'Tiro_Gumukhi Italic';
+            font-size: 17px;
+        }
+
+        .details_container {
+            position: relative;
+            width: 85%;
+            margin: auto;
+            align-self: center;
+            display: block;
+            top: 20px;
+            border: 0.1em #184a34 solid;
+            line-height: 1.5em;
+            height: auto;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+        }
+
+        .lower_container {
+            display: none;
+        }
+
+        .tc_container {
+            position: relative;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            border-top: 0.1em #184a34 solid;
+
+            width: 100%;
+            align-self: center;
+            margin: auto;
+            column-gap: 0;
+        }
+
+        .tc_container div {
+            border-right: 0.1em #184a3480 solid;
+            padding: 0 1em 0 1em;
+        }
+
+        .tc_container li {
+            margin-left: -2em;
+        }
+
+        .divid {
+            border-left: 2.5px solid #FFEEEB;
+            border-right: 2.5px solid #FFEEEB;
+            border-top: 0.1em #184a34 solid;
+            border-bottom: 0.1em #184a34 solid;
+            width: 100%;
+            position: relative;
+            margin: auto;
+            margin-left: -2px;
+            height: 2em;
+
+        }
+
+        .gallery {
+            position: relative;
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+            column-gap: auto;
+            grid-template-rows: 1fr;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        .gallery_column {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
+            width: auto;
+        }
+
+        .gallery_column img {
+            border: 1px #184A34 solid;
+            box-shadow: 0px 0px 2px 2px #EC933040;
+            max-width: 100%;
+            transition: transform 0.5s ease;
+            background-color: white;
+        }
+
+        .gallery_column img:hover {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            z-index: 2;
+        }
+
+        @media screen and (max-width: 800px) {
+            .main_container {
+                width: 90%;
+                height: auto;
+            }
+
+            .top_container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                padding: 0.5em;
+                height: auto;
+            }
+
+            .top_container div {
+                border-bottom: 0.1em #2a734b60 solid;
+                border-right: 0;
+                padding-top: 1.2em;
+            }
+
+            .button_container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto auto;
+                height: auto;
+                row-gap: 0.2em;
+            }
+
+            .button_container input {
+                width: 60%;
+                margin: auto;
+
+            }
+
+            .tc_container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                height: auto;
+                row-gap: 0.2em;
+            }
+
+            .tc_container div {
+                border-bottom: 0.1em #2a734b60 solid;
+                border-right: 0;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                row-gap: 0.8em;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="main_container">
+            <h1>@NYVJOR</h1>
+
+            <div class="top_container">
+
+                <div id="bio"> Hello! My name's Shonali and i'm 18. I edit, draw, and blog occasionally!
+
+                    I have been dipping in and out of fandoms, interests, and hobbies for many years now and have
+                    decided to
+                    open commissions for my work! Have a look around and contact me on <a
+                        href="https://x.com/nyvjor">@nyvjor</a> if
+                    you're interested ᵔᴗᵔ ! </div>
+                <div>I offer
+                    <ul>
+                        <li>Website Templates</li>
+                        <li>Complete Websites</li>
+                        <li>Coloring PSD</li>
+                        <li>Layouts</li>
+                        <li>Transparents / Cutouts</li>
+                        <li>Graphics</li>
+                    </ul>
+                </div>
+                <div style="border-right: 0;">Prices
+                    <ul>
+                        <li>variable, starting from 30$</li>
+                        <li>variable, starting from 40$</li>
+                        <li>3$ per psd</li>
+                        <li>6$ per layout</li>
+                        <li>starting from 3$ if paid</li>
+                        <li>variable, starting from 3$ per graphic</li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="margin-top: 3em;">
+            <h2>Details</h2>
+            <hr>
+            <div class="details_container">
+                <h3>All Resources</h3>
+                <ul>
+                    <li>all prices are in USD.</li>
+                    <li>prices may change without warning.</li>
+                    <li>price will be determined at the beginning, but paid midway.</li>
+                    <li>want a resource i don't seem to offer here? feel free to contact me and we can work something
+                        out!</li>
+                    <li><b>please feel free to ask questions if there is <em>any</em> confusion!</b></li>
+
+                </ul>
+
+            </div>
+            <div class="button_container">
+                <input alt="Websites" title="Websites" type="button" value="Websites" onclick="change('websites')">
+                <input alt="Coloring" title="Coloring" style="background-color: #ec9330; color: #184a34;" type="button"
+                    value="Coloring" onclick="change('coloring')">
+                <input alt="Layouts" title="Layouts" type="button" value="Layouts" onclick="change('layouts')">
+                <input alt="Cutouts" title="Cutouts" style="background-color: #ec9330; color: #184a34;" type="button"
+                    value="Cutouts" onclick="change('cutouts')">
+                <input type="button" title="Graphics" value="Graphics" onclick="change('graphics')">
+
+            </div>
+            <hr style="margin-bottom: 1em;">
+
+            <div id="websites" class="details_container lower_container">
+                <h3>Websites ( Templates + Complete )</h3>
+
+                <ul>
+                    <li>you will recieve html file(s) with internal (external if there are multiple pages) css and
+                        javascript.</li>
+                    <li>website prices are not fixed, varying based on complexity. they start at a <b>minimum of
+                            30$</b>.</li>
+                    <li>use of javascript increases the price.</li>
+                    <li>i am alright with using javascript by other coders, but please ensure you have permission to
+                        use the code.</li>
+                    <li>the price will be agreed upon before work is started on it.</li>
+                    <li>i can recreate carrds, rentries, and other similar sites.</li>
+                    <li><i>if you have a layout in mind, please draw a diagram in as much detail as you'd like</i>
+                        (examples below). <i>doing so makes everything much smoother.</i></li>
+                </ul>
+
+                <div class="tc_container">
+                    <div>
+                        <h4>Templates</h4>
+                        <ul>
+                            <li>placeholder text and images will be used where necessary.</li>
+                            <li>the template may be made available on my
+                                <a href="https://ko-fi.com/shonali">ko-fi</a> at a later date.
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="border-right: 0;">
+                        <h4>Complete</h4>
+                        <ul>
+                            <li>higher price than templates.</li>
+                            <li>the images used can be provided by you or graphics may be requested from me.
+                                <small>p.s. check out <a href="https://sukuna.ju.mp/">@vanyril</a> too!</small>
+                            </li>
+                            <li>you may ask me for help with maintenance after the request has been completed,
+                                but significant changes may incur costs.</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="divid"></div>
+                <h2 style="margin-right: 1.5em;">Examples</h2>
+                <div class="gallery">
+                    <div class="gallery_column">
+                        <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="coloring" class="details_container lower_container">
+
+                <h3>Coloring (PSDs)</h3>
+
+                <ul>
+                    <li>please specify what colors or style you would like, or how you would like a particular image
+                        changed.</li>
+                    <li>i will attempt to ensure that the coloring works on every skintone, but changing certain hues
+                        may require use of masks to work with darker skin.</li>
+                </ul>
+
+                <div class="divid"></div>
+                <h2 style="margin-right: 1.5em;">Examples</h2>
+                <div class="gallery">
+                    <div class="gallery_column">
+                        <img
+                            src="https://64.media.tumblr.com/45065ce9dbf53e9ba38c2a68785cc27f/a998e7c5f297478a-e0/s1280x1920/d4d304fb6f41971c38ca15b7d724d8587952c6e6.gif">
+                        <img
+                            src="https://64.media.tumblr.com/77eee30a0560b6b5696b86d0c22c3221/26d5740881aa013e-fc/s2048x3072/a0e4f8d37509c91d6ea523b6982e6351a2acdfcf.png">
+                    </div>
+                    <div class="gallery_column">
+                        <img
+                            src="https://64.media.tumblr.com/68ce0ce5770b79ee5d92cef681978567/21fbb623c517ce2d-54/s1280x1920/87d8d34d6aa650177af428465a9a0603879ab435.gif">
+                    </div>
+                    <div class="gallery_column">
+                        <img
+                            src="https://64.media.tumblr.com/eb908c3c3dd722d3ebab7e327b9280b1/bfcaa09f979f2fa9-fd/s1280x1920/e0fd3ab55a7abea02df3b40e7c4e03406eb744f2.gif">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="layouts" class="details_container lower_container">
+
+                <h3>Layouts</h3>
+
+                <ul>
+                    <li>you may request layouts of a certain character or style.</li>
+                    <li>i can also make individual icons.</li>
+                    <li>i <b>heavily</b> prefer having character images to work with provided by you.</li>
+                    <li>please specify which colours you would like the focus on, if any.</li>
+                    <li>i am also able to make the same layout for different sites, at no extra charge. some elements
+                        may be removed, but i will confirm this with you.</li>
+                </ul>
+
+                <div class="divid"></div>
+                <h2 style="margin-right: 1.5em;">Examples</h2>
+                <div class="gallery">
+                    <div class="gallery_column">
+                        <img src="https://i.postimg.cc/BQShWqRv/lillia.png">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://i.postimg.cc/1tSGpBZd/kirari.png">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://i.postimg.cc/7LkGcLQP/mf.png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="cutouts" class="details_container lower_container">
+
+                <h3>Transparents / Cutouts</h3>
+
+                <ul>
+                    <li>i may do these for free, but it is difficult to cutout real life people easily.</li>
+                    <li>due to my large backlog of projects, paying for cutouts significantly improves response time.
+                    </li>
+                    <li>price varies depending on quantity and ease of the work.</li>
+                    <li>below by me on tumblr (@reverserenders / @beauti)</li>
+
+                </ul>
+
+                <div class="divid"></div>
+                <h2 style="margin-right: 1.5em;">Examples</h2>
+                <div class="gallery">
+                    <div class="gallery_column">
+                        <img src="https://64.media.tumblr.com/785e38dceaa81125971b4d89c121429b/b43f50aa221b1df6-6a/s2048x3072/3664a5e207071aea3c7d1005f30e10eca7162ea3.pnj">
+                        <img src="https://64.media.tumblr.com/5a8507f923b140ec7cd869e3d06eb8ca/510087737226352b-77/s2048x3072/01bd8a0494703fe4dc3d66568227119a6e68f4c6.pnj">
+                        <img src="https://64.media.tumblr.com/479d4734a41d6229736ffd098e0a833e/fcb71173e63c7a19-2e/s2048x3072/6b6320b7fd70c40c9ad4419e061f53603943a31f.pnj">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://64.media.tumblr.com/08170474547aec7d0d377aaf1f14537c/aab702bed53a63c3-4a/s2048x3072/4ef1b18252e259042a5b44e3cee2169a191fa00e.pnj">
+                        <img src="https://64.media.tumblr.com/d9fcb5a2cc882a498339434d97078d0b/a86c84be20528fd9-6d/s2048x3072/a53f4c83ec9a110d8427247281b6e5c1cbf52ac6.pnj">
+                        <img src="https://64.media.tumblr.com/793d70aa8f9da24e8912a905028ec482/b192b1d709cb5c1a-15/s2048x3072/beb54889a09005e42457277f61520b49ea112a91.pnj">
+                    </div>
+                    <div class="gallery_column">
+                        <img
+                            src="https://64.media.tumblr.com/646e8a66da7946390b75b38736134aa3/331458c07444d5c3-6e/s2048x3072/76214285dc9d3de46084951c88a45cfd59d53ec6.png">
+                            <img src="https://64.media.tumblr.com/133c15f2a22a2a3e1b0697c506e689d4/244261b837fb41c1-c9/s2048x3072/9ede6476c5094d324afe9fddb2df8dcc27972f0d.pnj">
+                            <img src="https://64.media.tumblr.com/4f5ab412a6d9c08ad5939180ae240203/ed40fc404c143cdb-79/s2048x3072/deb80c15433a06fa831b0cf81000f63fd95e4485.pnj">
+
+                    </div>
+                </div>
+            </div>
+
+
+        <div id="graphics" class="details_container lower_container">
+
+            <h3>Graphics</h3>
+
+            <ul>
+                <li>you may request graphics of a certain character or style.</li>
+                <li>please specify which colours you would like the focus to be on.</li>
+                <li>you may request individual graphics or a set.</li>
+                <li>see the layouts section for more examples.</li>
+            </ul>
+
+                            <div class="divid"></div>
+                <h2 style="margin-right: 1.5em;">Examples</h2>
+                <div class="gallery">
+                    <div class="gallery_column">
+                        <img src="https://64.media.tumblr.com/9f224a801445b88c5eb8a6d6fce47af0/21de86ac0724e67a-e7/s2048x3072/9dccda5a7a098e25d296a66271514a719f9742e8.png">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://64.media.tumblr.com/af8e93406c10671042f68004f9848af6/6e642c3675245202-25/s2048x3072/967ed355b7ca46c73aaf87ca8c10124cf2166a3d.png">
+                        <img src="https://64.media.tumblr.com/6dba54499352239c831383b917fe4977/6e642c3675245202-54/s2048x3072/9f7867270a18f18242deeb25fded0f6b07f6861d.png">
+                    </div>
+                    <div class="gallery_column">
+                        <img src="https://64.media.tumblr.com/a57c06f95d70991c51671adc21cf254e/6e642c3675245202-9c/s2048x3072/f6a48498cb8e1d1387a0d674c5f6d26ac7e12e88.png">
+                    </div>
+                </div>
+
+        </div>
+
+        <h1 id="graphic"> graphic</h1>
+
+        </div>
+        </div>
+
+
+        </div>
+
+
+    </main>
+    <footer> by <a href="https://x.com/nyvjor">@nyvjor</a> with ♡</footer>
+
+    <script>
+        // change tab
+
+        var current = ""
+        function change(newtab) {
+            newtab = document.getElementById(newtab);
+            if (current != "") {
+                current.style.display = "none";
+            }
+            newtab.style.display = "block";
+            current = newtab;
+        }
+    </script>
+</body>
