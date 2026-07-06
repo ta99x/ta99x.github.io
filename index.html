@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-    
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +38,9 @@
             font-size: 16px;
             font-family: 'Tiro_Gurmukhi';
             line-height: 1.6em;
+            background-image: url('https://i.pinimg.com/1200x/70/bc/f9/70bcf96d39453b034ec786b3e1021404.jpg');
+            background-size: 30%;
+            background-blend-mode: overlay;
         }
 
 
@@ -47,13 +49,16 @@
             position: relative;
             width: 60%;
             height: auto;
-            background-color: #FFEEEB;
+            background-color: #FFEEEB90;
             top: 100px;
             margin: auto;
             box-shadow: 0 1em 1em 0.5em #123024;
             border-radius: 1em 1em 1em 1em;
             padding-top: 2em;
             padding-bottom: 2em;
+            background-size: 40%;
+            background-blend-mode: color;
+            background-image: url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         }
 
         .main_container a {
@@ -182,27 +187,39 @@
         .details_container {
             position: relative;
             width: 85%;
+            height: auto;
             margin: auto;
             align-self: center;
             display: block;
             top: 20px;
             border: 0.1em #184a34 solid;
             line-height: 1.5em;
-            height: auto;
             margin-bottom: 1em;
             padding-bottom: 1em;
+            box-sizing: border-box;
+        }
+        
+        .embel {
+            height: 100%;
+            position: absolute;
+            display: block;
+            right: 1em;
         }
 
         .lower_container {
             display: none;
         }
 
+        #web-top {
+            display: block;
+            position: relative;
+            height: auto;
+        }
         .tc_container {
             position: relative;
             display: grid;
             grid-template-columns: 40% 60%;
             border-top: 0.1em #184a34 solid;
-
             width: 100%;
             align-self: center;
             margin: auto;
@@ -219,8 +236,8 @@
         }
 
         .divid {
-            border-left: 2.5px solid #FFEEEB;
-            border-right: 2.5px solid #FFEEEB;
+            border-left: 2.5px solid #F0F0F0;
+            border-right: 2.5px solid #F0F0F0;
             border-top: 0.1em #184a34 solid;
             border-bottom: 0.1em #184a34 solid;
             width: 100%;
@@ -228,7 +245,6 @@
             margin: auto;
             margin-left: -2px;
             height: 2em;
-
         }
 
         .gallery {
@@ -262,6 +278,7 @@
             transform: scale(1.5);
             z-index: 2;
         }
+
 
         @media screen and (max-width: 800px) {
             .main_container {
@@ -336,13 +353,13 @@
                         <li>Complete Websites</li>
                         <li>Coloring PSD</li>
                         <li>Layouts</li>
-                        <li>Transparents / Cutouts</li>
+                        <li>Transparents / Cutouts / Recolors</li>
                         <li>Graphics</li>
                     </ul>
                 </div>
                 <div style="border-right: 0;">Prices
                     <ul>
-                        <li>variable, starting from 30$</li>
+                        <li>variable, starting from 20$</li>
                         <li>variable, starting from 40$</li>
                         <li>3$ per psd</li>
                         <li>6$ per layout</li>
@@ -354,8 +371,12 @@
             <hr style="margin-top: 3em;">
             <h2>Details</h2>
             <hr>
+            
             <div class="details_container">
+                <img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel" style="left: -0.5em;">
+                <div style="margin-left: 3em;">
                 <h3>All Resources</h3>
+
                 <ul>
                     <li>all prices are in USD.</li>
                     <li>prices may change without warning.</li>
@@ -363,9 +384,8 @@
                     <li>want a resource i don't seem to offer here? feel free to contact me and we can work something
                         out!</li>
                     <li><b>please feel free to ask questions if there is <em>any</em> confusion!</b></li>
-
                 </ul>
-
+                </div>
             </div>
             <div class="button_container">
                 <input alt="Websites" title="Websites" type="button" value="Websites" onclick="change('websites')">
@@ -380,13 +400,16 @@
             <hr style="margin-bottom: 1em;">
 
             <div id="websites" class="details_container lower_container">
+                <div id="web-top">
+                <img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel" style="height: 114%; top: -1.2em;">
+
                 <h3>Websites ( Templates + Complete )</h3>
 
                 <ul>
                     <li>you will recieve html file(s) with internal (external if there are multiple pages) css and
                         javascript.</li>
                     <li>website prices are not fixed, varying based on complexity. they start at a <b>minimum of
-                            30$</b>.</li>
+                            20$</b>.</li>
                     <li>use of javascript increases the price.</li>
                     <li>i am alright with using javascript by other coders, but please ensure you have permission to
                         use the code.</li>
@@ -395,7 +418,7 @@
                     <li><i>if you have a layout in mind, please draw a diagram in as much detail as you'd like</i>
                         (examples below). <i>doing so makes everything much smoother.</i></li>
                 </ul>
-
+</div>
                 <div class="tc_container">
                     <div>
                         <h4>Templates</h4>
@@ -435,6 +458,7 @@
             </div>
 
             <div id="coloring" class="details_container lower_container">
+                <div class="embel_cont" style="height: 175px;"><img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel"></div>
 
                 <h3>Coloring (PSDs)</h3>
 
@@ -443,6 +467,8 @@
                         changed.</li>
                     <li>i will attempt to ensure that the coloring works on every skintone, but changing certain hues
                         may require use of masks to work with darker skin.</li>
+                <li>below by me on tumblr (@beauti)</li>
+
                 </ul>
 
                 <div class="divid"></div>
@@ -469,6 +495,7 @@
 
 
             <div id="layouts" class="details_container lower_container">
+                <div class="embel_cont" style="height: 222px;"><img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel"></div>
 
                 <h3>Layouts</h3>
 
@@ -479,6 +506,8 @@
                     <li>please specify which colours you would like the focus on, if any.</li>
                     <li>i am also able to make the same layout for different sites, at no extra charge. some elements
                         may be removed, but i will confirm this with you.</li>
+                <li>below by me on tumblr (@beauti). do not use without credit.</li>
+
                 </ul>
 
                 <div class="divid"></div>
@@ -486,9 +515,12 @@
                 <div class="gallery">
                     <div class="gallery_column">
                         <img src="https://i.postimg.cc/BQShWqRv/lillia.png">
+                        
                     </div>
                     <div class="gallery_column">
                         <img src="https://i.postimg.cc/1tSGpBZd/kirari.png">
+                        <img src="https://i.postimg.cc/7hZdn2FK/nau.png">
+
                     </div>
                     <div class="gallery_column">
                         <img src="https://i.postimg.cc/7LkGcLQP/mf.png">
@@ -497,14 +529,16 @@
             </div>
 
             <div id="cutouts" class="details_container lower_container">
+                <div class="embel_cont" style="height:200px; margin-right: 1em;"><img src="https://i.postimg.cc/ZKzNp2wG/image-psd(4)(2).png" class="embel" style="height: 100%;"></div>
 
-                <h3>Transparents / Cutouts</h3>
+                <h3>Transparents / Cutouts / Recolors</h3>
 
                 <ul>
                     <li>i may do these for free, but it is difficult to cutout real life people easily.</li>
                     <li>due to my large backlog of projects, paying for cutouts significantly improves response time.
                     </li>
                     <li>price varies depending on quantity and ease of the work.</li>
+                    <li>i can also recolor certain parts of pictures.</li>
                     <li>below by me on tumblr (@reverserenders / @beauti)</li>
 
                 </ul>
@@ -513,18 +547,23 @@
                 <h2 style="margin-right: 1.5em;">Examples</h2>
                 <div class="gallery">
                     <div class="gallery_column">
+                        <img src="https://i.postimg.cc/fyw4JFWM/tp.png">
+
                         <img src="https://64.media.tumblr.com/785e38dceaa81125971b4d89c121429b/b43f50aa221b1df6-6a/s2048x3072/3664a5e207071aea3c7d1005f30e10eca7162ea3.pnj">
                         <img src="https://64.media.tumblr.com/5a8507f923b140ec7cd869e3d06eb8ca/510087737226352b-77/s2048x3072/01bd8a0494703fe4dc3d66568227119a6e68f4c6.pnj">
                         <img src="https://64.media.tumblr.com/479d4734a41d6229736ffd098e0a833e/fcb71173e63c7a19-2e/s2048x3072/6b6320b7fd70c40c9ad4419e061f53603943a31f.pnj">
                     </div>
                     <div class="gallery_column">
+        
                         <img src="https://64.media.tumblr.com/08170474547aec7d0d377aaf1f14537c/aab702bed53a63c3-4a/s2048x3072/4ef1b18252e259042a5b44e3cee2169a191fa00e.pnj">
+                        <img src="https://i.postimg.cc/LX2QT1cw/pandora-recolor.png">
                         <img src="https://64.media.tumblr.com/d9fcb5a2cc882a498339434d97078d0b/a86c84be20528fd9-6d/s2048x3072/a53f4c83ec9a110d8427247281b6e5c1cbf52ac6.pnj">
                         <img src="https://64.media.tumblr.com/793d70aa8f9da24e8912a905028ec482/b192b1d709cb5c1a-15/s2048x3072/beb54889a09005e42457277f61520b49ea112a91.pnj">
                     </div>
                     <div class="gallery_column">
                         <img
                             src="https://64.media.tumblr.com/646e8a66da7946390b75b38736134aa3/331458c07444d5c3-6e/s2048x3072/76214285dc9d3de46084951c88a45cfd59d53ec6.png">
+                            <img src="https://i.postimg.cc/BnRdxtQ0/tp2.png">
                             <img src="https://64.media.tumblr.com/133c15f2a22a2a3e1b0697c506e689d4/244261b837fb41c1-c9/s2048x3072/9ede6476c5094d324afe9fddb2df8dcc27972f0d.pnj">
                             <img src="https://64.media.tumblr.com/4f5ab412a6d9c08ad5939180ae240203/ed40fc404c143cdb-79/s2048x3072/deb80c15433a06fa831b0cf81000f63fd95e4485.pnj">
 
@@ -542,20 +581,28 @@
                 <li>please specify which colours you would like the focus to be on.</li>
                 <li>you may request individual graphics or a set.</li>
                 <li>see the layouts section for more examples.</li>
+                <li>below by me on tumblr (@beauti). do not use without credit.</li>
             </ul>
 
                             <div class="divid"></div>
                 <h2 style="margin-right: 1.5em;">Examples</h2>
                 <div class="gallery">
                     <div class="gallery_column">
-                        <img src="https://64.media.tumblr.com/9f224a801445b88c5eb8a6d6fce47af0/21de86ac0724e67a-e7/s2048x3072/9dccda5a7a098e25d296a66271514a719f9742e8.png">
+                        <img src="https://i.postimg.cc/V6LdgPNs/kkkk.png">
+                        <a href="https://rentry.org/spiralspsds" style="opacity: 60%;">▲ psd</a>
+                        <img src="https://i.postimg.cc/HkgvChtV/hori-1-2.png">
+                        <a href="https://www.tumblr.com/beauti/756067280595632128?source=share" style="opacity: 60%;">▲ psd</a>
                     </div>
                     <div class="gallery_column">
+<img src="https://i.postimg.cc/FHRP1wGt/shs.png">
                         <img src="https://64.media.tumblr.com/af8e93406c10671042f68004f9848af6/6e642c3675245202-25/s2048x3072/967ed355b7ca46c73aaf87ca8c10124cf2166a3d.png">
                         <img src="https://64.media.tumblr.com/6dba54499352239c831383b917fe4977/6e642c3675245202-54/s2048x3072/9f7867270a18f18242deeb25fded0f6b07f6861d.png">
+                    
                     </div>
                     <div class="gallery_column">
                         <img src="https://64.media.tumblr.com/a57c06f95d70991c51671adc21cf254e/6e642c3675245202-9c/s2048x3072/f6a48498cb8e1d1387a0d674c5f6d26ac7e12e88.png">
+                        <img src="https://64.media.tumblr.com/9f224a801445b88c5eb8a6d6fce47af0/21de86ac0724e67a-e7/s2048x3072/9dccda5a7a098e25d296a66271514a719f9742e8.png">
+
                     </div>
                 </div>
 
