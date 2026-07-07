@@ -49,7 +49,6 @@
             position: relative;
             width: 60%;
             height: auto;
-            background-color: #FFEEEB90;
             top: 100px;
             margin: auto;
             box-shadow: 0 1em 1em 0.5em #123024;
@@ -57,8 +56,9 @@
             padding-top: 2em;
             padding-bottom: 2em;
             background-size: 40%;
-            background-blend-mode: color;
-            background-image: url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-image: url('https://i.postimg.cc/RhwGk1jY/image-psd(3).png');
+            background-color: #ffffff70;
+            background-blend-mode: lighten;
         }
 
         .main_container a {
@@ -192,29 +192,64 @@
             align-self: center;
             display: block;
             top: 20px;
-            border: 0.1em #184a34 solid;
             line-height: 1.5em;
             margin-bottom: 1em;
             padding-bottom: 1em;
             box-sizing: border-box;
+            z-index: 2;
+
         }
-        
+
+        .examples_container {
+            position: relative;
+            height: auto;
+            display: block;
+            border: 0.1em #184a34 solid;
+            width: 100%;
+            padding-bottom: 1em;
+        }
+
+        .desc_container {
+            position: relative;
+            height: auto;
+            display: block;
+            border: 0.1em #184a34 solid;
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 4em;
+
+        }
+
         .embel {
             height: 100%;
             position: absolute;
             display: block;
             right: 1em;
+            z-index: -1;
+            max-width: 4em;
         }
 
         .lower_container {
             display: none;
         }
 
+        #all-embel {
+            left: -0.5em;
+            max-width: 100%;
+        }
+
         #web-top {
             display: block;
             position: relative;
             height: auto;
+            background-image: url('https://i.postimg.cc/bvjnMczN/e-On-Paste-20240903-202045.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            padding-right: 2em;
+
         }
+
         .tc_container {
             position: relative;
             display: grid;
@@ -236,15 +271,12 @@
         }
 
         .divid {
-            border-left: 2.5px solid #F0F0F0;
-            border-right: 2.5px solid #F0F0F0;
-            border-top: 0.1em #184a34 solid;
-            border-bottom: 0.1em #184a34 solid;
             width: 100%;
             position: relative;
             margin: auto;
-            margin-left: -2px;
             height: 2em;
+            left: -0.5%;
+
         }
 
         .gallery {
@@ -280,7 +312,7 @@
         }
 
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 820px) {
             .main_container {
                 width: 90%;
                 height: auto;
@@ -329,6 +361,13 @@
                 row-gap: 0.8em;
             }
 
+            .embel {
+                display: none;
+            }
+            #all-embel {
+                left: -3.5em
+            }
+
         }
     </style>
 </head>
@@ -339,7 +378,6 @@
             <h1>@NYVJOR</h1>
 
             <div class="top_container">
-
                 <div id="bio"> Hello! My name's Shonali and i'm 18. I edit, draw, and blog occasionally!
 
                     I have been dipping in and out of fandoms, interests, and hobbies for many years now and have
@@ -371,20 +409,21 @@
             <hr style="margin-top: 3em;">
             <h2>Details</h2>
             <hr>
-            
-            <div class="details_container">
-                <img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel" style="left: -0.5em;">
-                <div style="margin-left: 3em;">
-                <h3>All Resources</h3>
 
-                <ul>
-                    <li>all prices are in USD.</li>
-                    <li>prices may change without warning.</li>
-                    <li>price will be determined at the beginning, but paid midway.</li>
-                    <li>want a resource i don't seem to offer here? feel free to contact me and we can work something
-                        out!</li>
-                    <li><b>please feel free to ask questions if there is <em>any</em> confusion!</b></li>
-                </ul>
+            <div class="details_container desc_container" style="width: 85%;">
+                <img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel" id="all-embel">
+                <div style="margin-left: 3em;">
+                    <h3>All Resources</h3>
+
+                    <ul>
+                        <li>all prices are in USD.</li>
+                        <li>prices may change without warning.</li>
+                        <li>price will be determined at the beginning, but paid midway.</li>
+                        <li>want a resource i don't seem to offer here? feel free to contact me and we can work
+                            something
+                            out!</li>
+                        <li><b>please feel free to ask questions if there is <em>any</em> confusion!</b></li>
+                    </ul>
                 </div>
             </div>
             <div class="button_container">
@@ -400,211 +439,259 @@
             <hr style="margin-bottom: 1em;">
 
             <div id="websites" class="details_container lower_container">
-                <div id="web-top">
-                <img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel" style="height: 114%; top: -1.2em;">
+                <div class="desc_container" style="padding-right: 0;">
+                    <div id="web-top">
+                        <h3>Websites ( Templates + Complete )</h3>
 
-                <h3>Websites ( Templates + Complete )</h3>
-
-                <ul>
-                    <li>you will recieve html file(s) with internal (external if there are multiple pages) css and
-                        javascript.</li>
-                    <li>website prices are not fixed, varying based on complexity. they start at a <b>minimum of
-                            20$</b>.</li>
-                    <li>use of javascript increases the price.</li>
-                    <li>i am alright with using javascript by other coders, but please ensure you have permission to
-                        use the code.</li>
-                    <li>the price will be agreed upon before work is started on it.</li>
-                    <li>i can recreate carrds, rentries, and other similar sites.</li>
-                    <li><i>if you have a layout in mind, please draw a diagram in as much detail as you'd like</i>
-                        (examples below). <i>doing so makes everything much smoother.</i></li>
-                </ul>
-</div>
-                <div class="tc_container">
-                    <div>
-                        <h4>Templates</h4>
                         <ul>
-                            <li>placeholder text and images will be used where necessary.</li>
-                            <li>the template may be made available on my
-                                <a href="https://ko-fi.com/shonali">ko-fi</a> at a later date.
-                            </li>
+                            <li>you will recieve html file(s) with internal (external if there are multiple pages) css
+                                and
+                                javascript.</li>
+                            <li>website prices are not fixed, varying based on complexity. they start at a <b>minimum of
+                                    20$</b>.</li>
+                            <li>use of javascript increases the price.</li>
+                            <li>i am alright with using javascript by other coders, but please ensure you have
+                                permission to
+                                use the code.</li>
+                            <li>the price will be agreed upon before work is started on it.</li>
+                            <li>i can recreate carrds, rentries, and other similar sites.</li>
+                            <li><i>if you have a layout in mind, please draw a diagram in as much detail as you'd
+                                    like</i>
+                                (examples below). <i>doing so makes everything much smoother.</i></li>
+                            <li>THIS GALLERY IS A WIP DM FOR EXAMPLES!!! OTHER CATEGORIES HAVE COMPLETE GALLERIES.</li>
                         </ul>
                     </div>
-                    <div style="border-right: 0;">
-                        <h4>Complete</h4>
-                        <ul>
-                            <li>higher price than templates.</li>
-                            <li>the images used can be provided by you or graphics may be requested from me.
-                                <small>p.s. check out <a href="https://sukuna.ju.mp/">@vanyril</a> too!</small>
-                            </li>
-                            <li>you may ask me for help with maintenance after the request has been completed,
-                                but significant changes may incur costs.</li>
-                        </ul>
+                    <div class="tc_container">
+                        <div>
+                            <h4>Templates</h4>
+                            <ul>
+                                <li>placeholder text and images will be used where necessary.</li>
+                                <li>the template may be made available on my
+                                    <a href="https://ko-fi.com/shonali">ko-fi</a> at a later date.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="border-right: 0;">
+                            <h4>Complete</h4>
+                            <ul>
+                                <li>higher price than templates.</li>
+                                <li>the images used can be provided by you or graphics may be requested from me.
+                                    <small>p.s. check out <a href="https://sukuna.ju.mp/">@vanyril</a> too!</small>
+                                </li>
+                                <li>you may ask me for help with maintenance after the request has been completed,
+                                    but significant changes may incur costs.</li>
+                            </ul>
+                        </div>
                     </div>
-
                 </div>
                 <div class="divid"></div>
-                <h2 style="margin-right: 1.5em;">Examples</h2>
-                <div class="gallery">
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
-                    </div>
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
-                    </div>
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
+                <div class="examples_container">
+                    <h2 style="margin-right: 1.5em;">Examples</h2>
+                    <div class="gallery">
+                        <div class="gallery_column">
+                        <p>▲</p>
+
+                            <img src="https://i.postimg.cc/nhCWcWQf/image.png">
+
+                        </div>
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
+                        </div>
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/bY18VtFt/image-psd(54).png">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="coloring" class="details_container lower_container">
-                <div class="embel_cont" style="height: 175px;"><img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel"></div>
 
-                <h3>Coloring (PSDs)</h3>
+                <div class="desc_container">
+                    <img src="https://i.postimg.cc/ZKzNp2wG/image-psd(4)(2).png" class="embel">
 
-                <ul>
-                    <li>please specify what colors or style you would like, or how you would like a particular image
-                        changed.</li>
-                    <li>i will attempt to ensure that the coloring works on every skintone, but changing certain hues
-                        may require use of masks to work with darker skin.</li>
-                <li>below by me on tumblr (@beauti)</li>
+                    <h3>Coloring (PSDs)</h3>
 
-                </ul>
+                    <ul>
+                        <li>please specify what colors or style you would like, or how you would like a particular image
+                            changed.</li>
+                        <li>i will attempt to ensure that the coloring works on every skintone, but changing certain
+                            hues
+                            may require use of masks to work with darker skin.</li>
+                        <li>below by me on tumblr (@beauti)</li>
 
+                    </ul>
+                </div>
                 <div class="divid"></div>
-                <h2 style="margin-right: 1.5em;">Examples</h2>
-                <div class="gallery">
-                    <div class="gallery_column">
-                        <img
-                            src="https://64.media.tumblr.com/45065ce9dbf53e9ba38c2a68785cc27f/a998e7c5f297478a-e0/s1280x1920/d4d304fb6f41971c38ca15b7d724d8587952c6e6.gif">
-                        <img
-                            src="https://64.media.tumblr.com/77eee30a0560b6b5696b86d0c22c3221/26d5740881aa013e-fc/s2048x3072/a0e4f8d37509c91d6ea523b6982e6351a2acdfcf.png">
-                    </div>
-                    <div class="gallery_column">
-                        <img
-                            src="https://64.media.tumblr.com/68ce0ce5770b79ee5d92cef681978567/21fbb623c517ce2d-54/s1280x1920/87d8d34d6aa650177af428465a9a0603879ab435.gif">
-                    </div>
-                    <div class="gallery_column">
-                        <img
-                            src="https://64.media.tumblr.com/eb908c3c3dd722d3ebab7e327b9280b1/bfcaa09f979f2fa9-fd/s1280x1920/e0fd3ab55a7abea02df3b40e7c4e03406eb744f2.gif">
+                <div class="examples_container">
+
+                    <h2 style="margin-right: 1.5em;">Examples</h2>
+                    <div class="gallery">
+                        <div class="gallery_column">
+                            <img
+                                src="https://64.media.tumblr.com/45065ce9dbf53e9ba38c2a68785cc27f/a998e7c5f297478a-e0/s1280x1920/d4d304fb6f41971c38ca15b7d724d8587952c6e6.gif">
+                            <img
+                                src="https://64.media.tumblr.com/77eee30a0560b6b5696b86d0c22c3221/26d5740881aa013e-fc/s2048x3072/a0e4f8d37509c91d6ea523b6982e6351a2acdfcf.png">
+                        </div>
+                        <div class="gallery_column">
+                            <img
+                                src="https://64.media.tumblr.com/68ce0ce5770b79ee5d92cef681978567/21fbb623c517ce2d-54/s1280x1920/87d8d34d6aa650177af428465a9a0603879ab435.gif">
+                        </div>
+                        <div class="gallery_column">
+                            <img
+                                src="https://64.media.tumblr.com/eb908c3c3dd722d3ebab7e327b9280b1/bfcaa09f979f2fa9-fd/s1280x1920/e0fd3ab55a7abea02df3b40e7c4e03406eb744f2.gif">
+                        </div>
                     </div>
                 </div>
+
             </div>
 
 
 
 
             <div id="layouts" class="details_container lower_container">
-                <div class="embel_cont" style="height: 222px;"><img src="https://i.postimg.cc/brcHMMLB/embel.png" class="embel"></div>
+                <div class="desc_container">
+                    <img src="https://i.postimg.cc/ZKzNp2wG/image-psd(4)(2).png" class="embel">
 
-                <h3>Layouts</h3>
+                    <h3>Layouts</h3>
 
-                <ul>
-                    <li>you may request layouts of a certain character or style.</li>
-                    <li>i can also make individual icons.</li>
-                    <li>i <b>heavily</b> prefer having character images to work with provided by you.</li>
-                    <li>please specify which colours you would like the focus on, if any.</li>
-                    <li>i am also able to make the same layout for different sites, at no extra charge. some elements
-                        may be removed, but i will confirm this with you.</li>
-                <li>below by me on tumblr (@beauti). do not use without credit.</li>
+                    <ul>
+                        <li>you may request layouts of a certain character or style.</li>
+                        <li>i can also make individual icons.</li>
+                        <li>i <b>heavily</b> prefer having character images to work with provided by you.</li>
+                        <li>please specify which colours you would like the focus on, if any.</li>
+                        <li>i am also able to make the same layout for different sites, at no extra charge. some
+                            elements
+                            may be removed, but i will confirm this with you.</li>
+                        <li>below by me on tumblr (@beauti). do not use without credit.</li>
 
-                </ul>
+                    </ul>
+                </div>
 
                 <div class="divid"></div>
-                <h2 style="margin-right: 1.5em;">Examples</h2>
-                <div class="gallery">
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/BQShWqRv/lillia.png">
-                        
-                    </div>
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/1tSGpBZd/kirari.png">
-                        <img src="https://i.postimg.cc/7hZdn2FK/nau.png">
+                <div class="examples_container">
 
-                    </div>
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/7LkGcLQP/mf.png">
+                    <h2 style="margin-right: 1.5em;">Examples</h2>
+                    <div class="gallery">
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/BQShWqRv/lillia.png">
+
+                        </div>
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/1tSGpBZd/kirari.png">
+                            <img src="https://i.postimg.cc/7hZdn2FK/nau.png">
+
+                        </div>
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/7LkGcLQP/mf.png">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="cutouts" class="details_container lower_container">
-                <div class="embel_cont" style="height:200px; margin-right: 1em;"><img src="https://i.postimg.cc/ZKzNp2wG/image-psd(4)(2).png" class="embel" style="height: 100%;"></div>
+                <div class="desc_container">
+                    <img src="https://i.postimg.cc/ZKzNp2wG/image-psd(4)(2).png" class="embel">
 
-                <h3>Transparents / Cutouts / Recolors</h3>
+                    <h3>Transparents / Cutouts / Recolors</h3>
 
-                <ul>
-                    <li>i may do these for free, but it is difficult to cutout real life people easily.</li>
-                    <li>due to my large backlog of projects, paying for cutouts significantly improves response time.
-                    </li>
-                    <li>price varies depending on quantity and ease of the work.</li>
-                    <li>i can also recolor certain parts of pictures.</li>
-                    <li>below by me on tumblr (@reverserenders / @beauti)</li>
+                    <ul>
+                        <li>i may do these for free, but it is difficult to cutout real life people easily.</li>
+                        <li>due to my large backlog of projects, paying for cutouts significantly improves response
+                            time.
+                        </li>
+                        <li>price varies depending on quantity and ease of the work.</li>
+                        <li>i can also recolor certain parts of pictures.</li>
+                        <li>below by me on tumblr (@reverserenders / @beauti)</li>
 
-                </ul>
+                    </ul>
+                </div>
 
                 <div class="divid"></div>
-                <h2 style="margin-right: 1.5em;">Examples</h2>
-                <div class="gallery">
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/fyw4JFWM/tp.png">
+                <div class="examples_container">
 
-                        <img src="https://64.media.tumblr.com/785e38dceaa81125971b4d89c121429b/b43f50aa221b1df6-6a/s2048x3072/3664a5e207071aea3c7d1005f30e10eca7162ea3.pnj">
-                        <img src="https://64.media.tumblr.com/5a8507f923b140ec7cd869e3d06eb8ca/510087737226352b-77/s2048x3072/01bd8a0494703fe4dc3d66568227119a6e68f4c6.pnj">
-                        <img src="https://64.media.tumblr.com/479d4734a41d6229736ffd098e0a833e/fcb71173e63c7a19-2e/s2048x3072/6b6320b7fd70c40c9ad4419e061f53603943a31f.pnj">
-                    </div>
-                    <div class="gallery_column">
-        
-                        <img src="https://64.media.tumblr.com/08170474547aec7d0d377aaf1f14537c/aab702bed53a63c3-4a/s2048x3072/4ef1b18252e259042a5b44e3cee2169a191fa00e.pnj">
-                        <img src="https://i.postimg.cc/LX2QT1cw/pandora-recolor.png">
-                        <img src="https://64.media.tumblr.com/d9fcb5a2cc882a498339434d97078d0b/a86c84be20528fd9-6d/s2048x3072/a53f4c83ec9a110d8427247281b6e5c1cbf52ac6.pnj">
-                        <img src="https://64.media.tumblr.com/793d70aa8f9da24e8912a905028ec482/b192b1d709cb5c1a-15/s2048x3072/beb54889a09005e42457277f61520b49ea112a91.pnj">
-                    </div>
-                    <div class="gallery_column">
-                        <img
-                            src="https://64.media.tumblr.com/646e8a66da7946390b75b38736134aa3/331458c07444d5c3-6e/s2048x3072/76214285dc9d3de46084951c88a45cfd59d53ec6.png">
+                    <h2 style="margin-right: 1.5em;">Examples</h2>
+                    <div class="gallery">
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/fyw4JFWM/tp.png">
+
+                            <img
+                                src="https://64.media.tumblr.com/785e38dceaa81125971b4d89c121429b/b43f50aa221b1df6-6a/s2048x3072/3664a5e207071aea3c7d1005f30e10eca7162ea3.pnj">
+                            <img
+                                src="https://64.media.tumblr.com/5a8507f923b140ec7cd869e3d06eb8ca/510087737226352b-77/s2048x3072/01bd8a0494703fe4dc3d66568227119a6e68f4c6.pnj">
+                            <img
+                                src="https://64.media.tumblr.com/479d4734a41d6229736ffd098e0a833e/fcb71173e63c7a19-2e/s2048x3072/6b6320b7fd70c40c9ad4419e061f53603943a31f.pnj">
+                        </div>
+                        <div class="gallery_column">
+
+                            <img
+                                src="https://64.media.tumblr.com/08170474547aec7d0d377aaf1f14537c/aab702bed53a63c3-4a/s2048x3072/4ef1b18252e259042a5b44e3cee2169a191fa00e.pnj">
+                            <img src="https://i.postimg.cc/LX2QT1cw/pandora-recolor.png">
+                            <img
+                                src="https://64.media.tumblr.com/d9fcb5a2cc882a498339434d97078d0b/a86c84be20528fd9-6d/s2048x3072/a53f4c83ec9a110d8427247281b6e5c1cbf52ac6.pnj">
+                            <img
+                                src="https://64.media.tumblr.com/793d70aa8f9da24e8912a905028ec482/b192b1d709cb5c1a-15/s2048x3072/beb54889a09005e42457277f61520b49ea112a91.pnj">
+                        </div>
+                        <div class="gallery_column">
+                            <img
+                                src="https://64.media.tumblr.com/646e8a66da7946390b75b38736134aa3/331458c07444d5c3-6e/s2048x3072/76214285dc9d3de46084951c88a45cfd59d53ec6.png">
                             <img src="https://i.postimg.cc/BnRdxtQ0/tp2.png">
-                            <img src="https://64.media.tumblr.com/133c15f2a22a2a3e1b0697c506e689d4/244261b837fb41c1-c9/s2048x3072/9ede6476c5094d324afe9fddb2df8dcc27972f0d.pnj">
-                            <img src="https://64.media.tumblr.com/4f5ab412a6d9c08ad5939180ae240203/ed40fc404c143cdb-79/s2048x3072/deb80c15433a06fa831b0cf81000f63fd95e4485.pnj">
+                            <img
+                                src="https://64.media.tumblr.com/133c15f2a22a2a3e1b0697c506e689d4/244261b837fb41c1-c9/s2048x3072/9ede6476c5094d324afe9fddb2df8dcc27972f0d.pnj">
+                            <img
+                                src="https://64.media.tumblr.com/4f5ab412a6d9c08ad5939180ae240203/ed40fc404c143cdb-79/s2048x3072/deb80c15433a06fa831b0cf81000f63fd95e4485.pnj">
 
+                        </div>
                     </div>
                 </div>
             </div>
 
 
-        <div id="graphics" class="details_container lower_container">
 
-            <h3>Graphics</h3>
+            <div id="graphics" class="details_container lower_container">
+                <div class="desc_container">
+                    <img src="https://i.postimg.cc/ZKzNp2wG/image-psd(4)(2).png" class="embel">
 
-            <ul>
-                <li>you may request graphics of a certain character or style.</li>
-                <li>please specify which colours you would like the focus to be on.</li>
-                <li>you may request individual graphics or a set.</li>
-                <li>see the layouts section for more examples.</li>
-                <li>below by me on tumblr (@beauti). do not use without credit.</li>
-            </ul>
+                    <h3>Graphics</h3>
 
-                            <div class="divid"></div>
-                <h2 style="margin-right: 1.5em;">Examples</h2>
-                <div class="gallery">
-                    <div class="gallery_column">
-                        <img src="https://i.postimg.cc/V6LdgPNs/kkkk.png">
-                        <a href="https://rentry.org/spiralspsds" style="opacity: 60%;">▲ psd</a>
-                        <img src="https://i.postimg.cc/HkgvChtV/hori-1-2.png">
-                        <a href="https://www.tumblr.com/beauti/756067280595632128?source=share" style="opacity: 60%;">▲ psd</a>
-                    </div>
-                    <div class="gallery_column">
-<img src="https://i.postimg.cc/FHRP1wGt/shs.png">
-                        <img src="https://64.media.tumblr.com/af8e93406c10671042f68004f9848af6/6e642c3675245202-25/s2048x3072/967ed355b7ca46c73aaf87ca8c10124cf2166a3d.png">
-                        <img src="https://64.media.tumblr.com/6dba54499352239c831383b917fe4977/6e642c3675245202-54/s2048x3072/9f7867270a18f18242deeb25fded0f6b07f6861d.png">
-                    
-                    </div>
-                    <div class="gallery_column">
-                        <img src="https://64.media.tumblr.com/a57c06f95d70991c51671adc21cf254e/6e642c3675245202-9c/s2048x3072/f6a48498cb8e1d1387a0d674c5f6d26ac7e12e88.png">
-                        <img src="https://64.media.tumblr.com/9f224a801445b88c5eb8a6d6fce47af0/21de86ac0724e67a-e7/s2048x3072/9dccda5a7a098e25d296a66271514a719f9742e8.png">
+                    <ul>
+                        <li>you may request graphics of a certain character or style.</li>
+                        <li>please specify which colours you would like the focus to be on.</li>
+                        <li>you may request individual graphics or a set.</li>
+                        <li>see the layouts section for more examples.</li>
+                        <li>below by me on tumblr (@beauti). do not use without credit.</li>
+                    </ul>
+                </div>
+                <div class="divid"></div>
+                <div class="examples_container">
+                    <h2 style="margin-right: 1.5em;">Examples</h2>
+                    <div class="gallery">
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/V6LdgPNs/kkkk.png">
+                            <a href="https://rentry.org/spiralspsds" style="opacity: 60%;">▲ psd</a>
+                            <img src="https://i.postimg.cc/HkgvChtV/hori-1-2.png">
+                            <a href="https://www.tumblr.com/beauti/756067280595632128?source=share"
+                                style="opacity: 60%;">▲
+                                psd</a>
+                        </div>
+                        <div class="gallery_column">
+                            <img src="https://i.postimg.cc/FHRP1wGt/shs.png">
+                            <img
+                                src="https://64.media.tumblr.com/af8e93406c10671042f68004f9848af6/6e642c3675245202-25/s2048x3072/967ed355b7ca46c73aaf87ca8c10124cf2166a3d.png">
+                            <img
+                                src="https://64.media.tumblr.com/6dba54499352239c831383b917fe4977/6e642c3675245202-54/s2048x3072/9f7867270a18f18242deeb25fded0f6b07f6861d.png">
 
+                        </div>
+                        <div class="gallery_column">
+                            <img
+                                src="https://64.media.tumblr.com/a57c06f95d70991c51671adc21cf254e/6e642c3675245202-9c/s2048x3072/f6a48498cb8e1d1387a0d674c5f6d26ac7e12e88.png">
+                            <img
+                                src="https://64.media.tumblr.com/9f224a801445b88c5eb8a6d6fce47af0/21de86ac0724e67a-e7/s2048x3072/9dccda5a7a098e25d296a66271514a719f9742e8.png">
+
+                        </div>
                     </div>
                 </div>
+            </div>
+
 
         </div>
 
